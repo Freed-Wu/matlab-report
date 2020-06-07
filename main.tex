@@ -1,0 +1,175 @@
+% Fakesection 序言之前
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\RequirePackage{ifxetex}
+\RequireXeTeX
+
+\documentclass{ctexart}
+
+%颜色
+\usepackage{xcolor}
+
+%长度
+\usepackage{printlen}
+\uselengthunit{mm}
+
+%图形
+\usepackage{media9}
+\usepackage{pdfpages}
+\usepackage{overpic}
+\usepackage{graphicx}
+\graphicspath{{./src/}}
+\usepackage{wallpaper}
+\usepackage{wrapfig}
+\usepackage{pifont}
+\usepackage{pstricks}
+\usepackage{smartdiagram}
+\usepackage[edges]{forest}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{chains}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{graphs}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shadings}
+\usepackage{scsnowman}
+\usepackage{circuitikz}
+\usepackage{tikzpeople}
+\usepackage{tikzducks}
+\usepackage{flowchart}
+\usepackage{ean13isbn}
+\usepackage{qrcode}
+\usepackage{pgf-pie}
+\usepackage{pgfmath}
+
+%表格
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{diagbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancybox}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{theorems}
+\tcbuselibrary{listings}
+\tcbuselibrary{xparse}
+\tcbuselibrary{minted}% 用minted排版代码
+\usepackage{fvextra}
+\usepackage{csvsimple}
+\usepackage{boxedminipage2e}
+
+%公式
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{textcomp}
+\usepackage{latexsym}
+\usepackage{exscale}
+\usepackage{relsize}
+%\usepackage{xymtex}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{hologo}
+\usepackage{cases}
+
+%正文
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\renewcommand\arraystretch{1.5}
+
+%非正文
+\usepackage{makeidx}
+\makeindex
+\usepackage{epigraph}
+\usepackage{varwidth}
+
+%参考文献
+\usepackage{morewrites}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[resetlabels]{multibib}
+
+%标题
+\usepackage{caption}
+\usepackage{subcaption}
+\DeclareCaptionLabelFormat{andtable}%
+{#1#2~\&~\tablename\thetable}
+
+%其它
+\usepackage{atbegshi}
+\usepackage{lipsum}
+
+%文字
+\usepackage{csquotes}
+\usepackage{microtype}
+
+\csname
+endofdump
+\endcsname
+
+%代码
+\usepackage{minted}
+\usepackage{pygmentex}
+\usepackage{mcode}
+\lstset{
+	language = Matlab, 			%thelanguageofthecode
+	basicstyle = \tiny,%\monaco, 		%thesizeofthefontsthatareusedforthecode
+	numbers = left, 				%wheretoputtheline-numbers
+	numberstyle = \tiny\color{gray},%\monaco, 	%thestylethatisusedfortheline-numbers
+	stepnumber = 1, 			%thestepbetweentwoline-numbers.Ifit's1, eachlinewillbenumbered
+	numbersep = 5pt, 			%howfartheline-numbersarefromthecode
+	% 	backgroundcolor = \color{white}, %choosethebackgroundcolor.Youmustadd\usepackage{color}
+	% 	showspaces = false, 			%showspacesaddingparticularunderscores
+	% 	showstringspaces = false, 		%underlinespaceswithinstrings
+	% 	showtabs = false, 			%showtabswithinstringsaddingparticularunderscores
+	frame = single, 				%addsaframearoundthecode
+	% 	rulecolor = \color{black}, 		%ifnotset, theframe-colormaybechangedonline-breakswithinnot-blacktext(e.g.commens(greenhere))
+	% 	tabsize = 4, 				%setsdefaulttabsizeto2spaces
+	% 	captionpos = b, 				%setsthecaption-positiontobottom
+	% 	breaklines = true, 			%setsautomaticlinebreaking
+	% 	breakatwhitespace = false, 	%setsifautomaticbreaksshouldonlyhappenatwhitespace
+	% 	title = \lstname, 				%showthefilenameoffilesincludedwith\lstinputlisting; alsotrycaptioninsteadoftitle
+	% 	keywordstyle = \color{blue}, 	%keywordstyle
+	% 	commentstyle = \color{dkgreen}, %commentstyle
+	% 	stringstyle = \color{mauve}, 	%stringliteralstyle
+	% 	escapeinside = ``, 			%ifyouwanttoaddLaTeXwithinyourcode
+	% 	morekeywords = {*, ...},		%ifyouwanttoaddmorekeywordstotheset
+	columns=flexible
+}
+
+\begin{document}
+
+\newgeometry{bottom=1cm}
+
+\centering
+\lstinputlisting{src/exflyone.m}
+\lstinputlisting{src/main.m}
+\lstinputlisting{src/exflydt.m}
+\lstinputlisting{src/drawall.m}
+\lstinputlisting{src/calledit.m}
+\includegraphics[width=\linewidth]{matlab.png}
+
+\restoregeometry
+
+\end{document}
+
